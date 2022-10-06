@@ -13,19 +13,22 @@ body {
     --primary-color: #13C5DD;
     --font-color: #1D2A4D ;
 }
+h1,h2,h3,h4,h5,h6 {
+    font-family: "Roboto Condensed",sans-serif;
+}
 /* start header  */
 .header {
     color : #848E9F!important;
 }
 .left-info {
-    padding: 20px ;
-    margin-left: 4rem;
+    padding-top: 10px ;
+    margin-left: 8.95rem;
     float: left;
     cursor: pointer;
 }
 .right-info {
-    padding: 20px ;
-    margin-right: 4rem;
+    padding-top: 10px ;
+    margin-right: 9.5rem;
     float: right;
     cursor: pointer;
 }
@@ -35,14 +38,18 @@ body {
 .clr {
     clear: both;
 }
-
 /* end header  */
 /* start navbar */
+nav {
+    /* position : sticky;
+     top: 0;
+     background-color: #fff; */
+}
 nav .left-nav {
     float: left;
     padding: 20px;
     color: var(--primary-color) ;
-    margin-left: 4rem;
+    margin-left: 7.5rem;
     font-size: 40px;
     cursor: pointer;
 }
@@ -178,34 +185,82 @@ nav .right-nav span {
 
 /* start home */
 .home {
-     height: 100vh; 
+     height: 65vh; 
      width: 100%;
     background-image:
    url(/assets/hero.jpg);
   background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.home .left-home {
+    float: left;
+    margin-left: 7.5rem;
+    width: 58%;
+    padding: 20px;
+
+}
+.home .left-home span {
+    color: var(--primary-color) ;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size:20px;
+}
+.home .left-home h2 {
+    font-size: 70px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #fff;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    text-transform: capitalize;
 }
 
-/* .home img {
-    width: 100%;
-    height: 92vh
-} */
+.home .left-home .btn-one ,.home .left-home .btn-two {
+    padding: 20px 40px ;
+    color: #1D2A4D;
+    background-color: #fff;
+    border-radius: 5px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    border: none;
+    font-weight: bold;
+    font-size: 16px;
+    text-transform: capitalize;
+    cursor: pointer;
+}
+.home .left-home .btn-two {
+    color:#fff;
+    background-color: transparent;
+    border: solid 1px;
+    margin-left: 15px;
+}
+.home .left-home .btn-two:hover {
+    color: #1D2A4D;
+    background-color: #fff;
+}
+
 /* end home */
 
 /* start about */
 .about {
     margin-top: 6rem;
-    width: 100vw;
-    background-color: #13C5DD;
+    /* width: 100vw; */
+    /* background-color: #13C5DD; */
 }
 .about .left-about {
     width: 40%;
+    height: 100%;
     float: left;
 }
 .about .left-about img {
     width: 80%;
-    height: 100%;
+    height: 500px;
     float: right;
-    margin-left: 5rem;
+    margin-left: 8.5rem;
     border-radius: 10px;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
@@ -213,46 +268,56 @@ nav .right-nav span {
     -o-border-radius: 10px;
    
 }
-.about .right-about{
-    position: relative;
-    /* left: 3rem; */
-}
 .about .right-about>span{
     color: var(--primary-color) ;
     text-transform: uppercase;
     font-weight: bold;
     font-size: 18px;
+    margin-left: 3rem;
 }
 .about .right-about h2 {
     font-size: 55px;
     color: var(--font-color);
     margin-top: 1rem;
+    margin-left:3rem;
+
 }
 .about .right-about p {
     font-size: 16px;
     color: #848E9F;
-    margin: 1.5rem 12rem 1rem 0rem;
+    margin: 1.5rem 12rem 1rem 3rem;
     line-height: 25px;
 }
-.icons-about div {
-    display: inline-block;
-    margin-top: 2.5rem;
+.icons-about {
+    display: flex;
 }
-.icons-about>div {
-    margin-left: 2rem;
+.icons-about div {
+    margin-top: 2.5rem;
+    width: 170px;
+    height: 170px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.icons-about>div{
+    margin-left: 2.75rem;
+    background-color: #EFF5F9 ;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
 }
 .icons-about i {
     font-size: 45px;
-    margin-left: 12px;
     margin-bottom: 15px;
-    margin-right: 6rem;
     color: var(--primary-color);
 }
 .icons-about div span {
    font-weight: bold;
 }
 .icons-about div .center {
-    margin-left: 10px;
     color: var(--primary-color);
     font-weight: bold;
     font-size: 14px;
@@ -314,13 +379,22 @@ nav .right-nav span {
     margin-bottom: 6rem;
 }
 .services .service {
-    width: 340px;
+    width: 400px;
     text-align: center;
     display: inline-block;
-    margin-right:8rem;
+    margin-right:4rem;
+    margin-bottom:2rem;
+    background-color: #EFF5F9 ;
+    padding: 45px 45px 0 45px ;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    box-sizing: border-box;
 }
 .services .child {
-    margin-left: 10%;
+    margin-left: 8.25rem
 }
 
 /*end sevices */
@@ -334,11 +408,11 @@ nav .right-nav span {
     float: left;
     margin-left: 8rem;
     width: 38%;
-   
+    margin-top: 6.25rem;
 
 }
 .appointment .left-appoint span {
-    color: var(--primary-color) ;
+    color: #fff ;
     text-transform: uppercase;
     font-weight: bold;
     font-size: 18px;
@@ -347,14 +421,14 @@ nav .right-nav span {
     font-size: 50px;
     color: var(--font-color);
     margin-top: 1rem;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
     text-transform: capitalize;
 }
 .appointment .left-appoint p {
     font-size: 16px;
-    color: #848E9F;
+    color: #fff;
     line-height: 25px;
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
 }
 .appointment .left-appoint .btn-one ,.appointment .left-appoint .btn-two {
     padding: 20px 40px ;
@@ -370,40 +444,174 @@ nav .right-nav span {
     font-size: 16px;
     text-transform: capitalize;
     cursor: pointer;
+    margin-bottom: 8rem;
 }
 .appointment .left-appoint .btn-two {
     color:#1D2A4D;
     background-color: transparent;
     border: solid 1px;
     margin-left: 15px;
+    
 }
 .appointment .left-appoint .btn-two:hover {
     color: #fff;
     background-color: #1D2A4D;
+    border: none;
 }
-
-.right-appoint {
-    background-color: #8da7f1;
+.appointment .right-appoint {
+    float: left;
+    background-color: #fff;
+    width: 40%;
+    height: 450px;
+    padding: 20px;
+    margin-top: 6rem;
+    margin-left: 4rem;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    overflow: hidden;
+}
+.appointment .right-appoint .title {
+    text-align: center;
+    margin-top: 30px;
 }
 .appointment .right-appoint h2{
-    font-size: 25px;
+    font-size:35px;
     color: var(--font-color);
-    margin-top: 1rem;
-    margin-bottom: 1rem;
     text-transform: capitalize;
-    margin-left: 45%;
+    font-weight: 700;
+    margin-bottom: 1rem;
 }
 .appointment .right-appoint form {
-    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .appointment .right-appoint select {
-    
-    padding: 20px;
+    margin:  0 0.75rem 0  0;
+    padding:  15px;
     width: 250px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    border: none;
+    background-color: #EFF5F9 ;
+    color: #848E9F;
+    text-transform: capitalize;
+    font-size: 18px;
 }
-.appointment .right-appoint{
-    float: left;
+.appointment .right-appoint select:focus{
+    outline-color: #60eafc;
+  }
+.appointment .right-appoint select option{
+   color: #848E9F;
+   outline: var(--primary-color);
+}
+.appointment .right-appoint input  {
+    margin: 2rem 1rem 0  0;
+    padding:  15px;
+    width: 250px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    border: none;
+    background-color: #EFF5F9 ;
+    color: #848E9F;
+    font-size: 18px;
+}
+.appointment .right-appoint button {
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    padding: 20px  10px ;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    width: 510px;
+    text-transform: capitalize;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+    margin: 2rem 0 2rem -5px ;
+}
+/* end apppointment */
+
+/* start packages */
+.packages {
+    margin-top: 6rem;
+}
+.packages div.title {
+    text-align: center;
+    width: 700px;
+    margin-left: 27%;
+    margin-bottom: 6rem;
+}
+.packages div>span{
+    color: var(--primary-color) ;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 18px;
+}
+.packages div h2{
+    font-size: 55px;
+    color: var(--font-color);
+    margin-top: 1rem;
+    text-transform: capitalize;
+}
+.packages .packages-cards{
+    width: 100%;
+}
+.packages .packages-cards .package-one  {
+    width: 30%;
+}
+.packages .packages-cards .package-one .img {
+    position: absolute;
+    width: 25.4%;
+    height: 270px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+.packages .packages-cards .package-one .package-title {
+    width: 25.3%;
+    height: 250px;
+    position: absolute;
+    background: rgba(29, 42, 77, .8);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-transform: capitalize;
+    line-height: 1.2;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+.packages .packages-cards .package-one .package-title>h3{
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+.packages .packages-cards .package-one .package-title h4 {
+    font-size: 55px;
+}
+.packages .packages-cards .package-one .package-title h4 sub ,
+.packages .packages-cards .package-one .package-title h4 sup
+ {
+    font-size: 20px;
 }
 
-/* end apppointment */
+/* end packages */
